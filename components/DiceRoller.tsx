@@ -46,7 +46,7 @@ const DiceRoller: React.FC<DiceRollerProps> = ({ onRollComplete, autoSuccess }) 
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-6">
+    <div className="flex flex-col items-center justify-center py-4 sm:py-6">
       <div 
         onClick={handleRoll}
         className={`w-24 h-24 relative flex items-center justify-center cursor-pointer transition-transform ${isRolling ? 'rolling' : ''}`}
@@ -68,19 +68,19 @@ const DiceRoller: React.FC<DiceRollerProps> = ({ onRollComplete, autoSuccess }) 
       </div>
       
       {!hasRolled && !isRolling && (
-        <p className="mt-4 text-sm font-mono animate-pulse text-yellow-300">
+        <p className="mt-3 sm:mt-4 text-xs sm:text-sm font-mono animate-pulse text-yellow-300">
           TAP DIE TO ROLL
         </p>
       )}
       
       {isRolling && (
-        <p className="mt-4 text-sm font-mono text-slate-400">
+        <p className="mt-3 sm:mt-4 text-xs sm:text-sm font-mono text-slate-400">
           ROLLING FOR FATE...
         </p>
       )}
       
       {hasRolled && (
-        <p className={`mt-4 text-lg font-pixel ${displayValue > 10 ? 'text-green-400' : 'text-red-400'}`}>
+        <p className={`mt-3 sm:mt-4 text-base sm:text-lg font-pixel ${displayValue > 10 ? 'text-green-400' : 'text-red-400'}`}>
           {displayValue > 10 ? 'SUCCESS!' : 'CHAOS!'}
         </p>
       )}

@@ -5,15 +5,15 @@ import { CharacterItem, StoryNode } from './types';
 export const ASSETS = {
   // Placeholder images used. REPLACE THESE with your real content.
   catBiscuits: "https://picsum.photos/id/40/800/600", // Video placeholder
-  catZoomies: "https://picsum.photos/id/1025/800/600", // Video placeholder
-  dance: "https://picsum.photos/id/158/800/600",
-  horseMilk: "https://picsum.photos/id/225/800/600",
-  toiletSeat: "https://picsum.photos/id/449/800/600",
-  hiking: "https://picsum.photos/id/554/800/600",
-  bowlingFail: "https://picsum.photos/id/888/800/600",
-  dadBeach: "https://picsum.photos/id/1011/800/600", // The sentimental photo
-  proposalYes: "https://picsum.photos/id/64/800/600", // Photobooth
-  proposalNo: "https://picsum.photos/id/1084/800/600", // Handshake
+  catZoomies: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937897/20251128_101936_hkdwa3.mp4", // Video placeholder
+  dance: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937944/20250609_201732_k8ongs.mp4",
+  horseMilk: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937792/VID-20250712-WA0009_gdnavs.mp4",
+  toiletSeat: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937919/20241105_150356_m2x8pv.mp4",
+  hiking: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937937/20250708_164248_mjxa7o.mp4",
+  bowlingFail: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937896/20240525_162548_mrwebj.mp4",
+  dadBeach: "https://res.cloudinary.com/dbiodosax/image/upload/v1769937784/20250126_165751_swfiv5.jpg", // The sentimental photo
+  proposalYes: "https://res.cloudinary.com/dbiodosax/video/upload/v1769937760/VID-20251115-WA0000_wvnntp.mp4", // Photobooth
+  proposalNo: "https://res.cloudinary.com/dbiodosax/image/upload/v1769937773/20240214_205303_i7yhqt.jpg", // Handshake
 };
 
 // --- CHARACTER ITEMS ---

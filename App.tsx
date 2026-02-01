@@ -32,7 +32,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-amber-50 overflow-hidden relative max-w-lg mx-auto shadow-2xl border-x border-slate-800">
+    <div className="h-[100dvh] max-h-[100dvh] bg-slate-900 text-amber-50 overflow-hidden relative max-w-lg mx-auto shadow-2xl border-x border-slate-800 w-full">
       
       {/* Top Bar (Inventory/Status) - Only show when playing */}
       {phase !== GamePhase.WELCOME && phase !== GamePhase.CHARACTER_CREATION && character && (
@@ -50,23 +50,23 @@ const App: React.FC = () => {
       )}
 
       {/* Main Content Area */}
-      <div className={`h-screen pt-12 ${phase === GamePhase.WELCOME ? 'pt-0' : ''}`}>
+      <div className={`h-full min-h-0 pb-3 ${phase === GamePhase.WELCOME ? 'pt-0' : 'pt-12'}`}>
         
         {/* Phase: WELCOME */}
         {phase === GamePhase.WELCOME && (
-          <div className="flex flex-col items-center justify-center h-full p-6 space-y-8 animate-fade-in bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
-            <h1 className="text-4xl font-pixel text-center text-yellow-400 leading-tight drop-shadow-lg">
+          <div className="flex flex-col items-center justify-center h-full p-4 sm:p-6 space-y-5 sm:space-y-8 animate-fade-in bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+            <h1 className="text-3xl sm:text-4xl font-pixel text-center text-yellow-400 leading-tight drop-shadow-lg">
               The Chronicles<br/>of Us
             </h1>
-            <p className="font-story text-center text-slate-300 italic max-w-xs">
+            <p className="font-story text-center text-slate-300 italic max-w-xs text-sm sm:text-base">
               A Valentine's Quest through the Realm of Memories.
             </p>
-            <div className="w-32 h-32 bg-slate-800 rounded-full flex items-center justify-center border-4 border-yellow-600 shadow-[0_0_50px_rgba(234,179,8,0.2)] animate-pulse">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 bg-slate-800 rounded-full flex items-center justify-center border-4 border-yellow-600 shadow-[0_0_50px_rgba(234,179,8,0.2)] animate-pulse">
                <span className="text-6xl">❤️</span>
             </div>
             <button
               onClick={() => setPhase(GamePhase.CHARACTER_CREATION)}
-              className="px-8 py-4 bg-yellow-600 text-slate-900 font-pixel rounded hover:bg-yellow-500 transition-transform active:scale-95 shadow-xl"
+              className="px-8 py-3 sm:py-4 bg-yellow-600 text-slate-900 font-pixel rounded hover:bg-yellow-500 transition-transform active:scale-95 shadow-xl text-sm sm:text-base"
             >
               NEW GAME
             </button>
@@ -95,7 +95,7 @@ const App: React.FC = () => {
 
         {/* Phase: FINAL BOSS (Proposal) */}
         {phase === GamePhase.FINAL_BOSS && character && (
-          <FinalProposal character={character} wifeName="Babe" /> // Replace with wife's name or use char name
+          <FinalProposal character={character} wifeName="Kiki Bear" /> 
         )}
       </div>
     </div>

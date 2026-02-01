@@ -21,11 +21,11 @@ const CharacterCreator: React.FC<CharacterCreatorProps> = ({ onComplete }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-w-md mx-auto p-4 space-y-6 animate-fade-in">
-      <h2 className="text-2xl font-pixel text-yellow-400 text-center mb-4">Create Your Hero</h2>
+    <div className="flex flex-col items-center w-full max-w-md mx-auto p-4 sm:p-6 space-y-4 sm:space-y-6 animate-fade-in h-full min-h-0 overflow-hidden">
+      <h2 className="text-xl sm:text-2xl font-pixel text-yellow-400 text-center mb-2 sm:mb-4">Create Your Hero</h2>
 
       {/* Avatar Preview */}
-      <div className="relative w-48 h-48 bg-slate-800 border-4 border-yellow-600 rounded-lg flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+      <div className="relative w-36 h-36 sm:w-48 sm:h-48 bg-slate-800 border-4 border-yellow-600 rounded-lg flex items-center justify-center mb-2 sm:mb-4 shadow-[0_0_20px_rgba(234,179,8,0.3)]">
         <div className="absolute inset-0 bg-slate-900 opacity-50 z-0"></div>
         {/* Simple Composition of Emojis to represent character */}
         <div className="z-10 flex flex-col items-center transform scale-150">
@@ -44,12 +44,12 @@ const CharacterCreator: React.FC<CharacterCreatorProps> = ({ onComplete }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter Name..."
-          className="w-full bg-slate-800 border-2 border-slate-600 text-white p-3 font-pixel text-sm focus:border-yellow-500 outline-none rounded"
+          className="w-full bg-slate-800 border-2 border-slate-600 text-white p-2.5 sm:p-3 font-pixel text-xs sm:text-sm focus:border-yellow-500 outline-none rounded"
         />
       </div>
 
       {/* Selection Grids */}
-      <div className="w-full space-y-4">
+      <div className="w-full space-y-3 sm:space-y-4">
         <SelectionRow label="HEADGEAR" options={HEADGEAR_OPTIONS} selected={headgear} onSelect={setHeadgear} />
         <SelectionRow label="OUTFIT" options={OUTFIT_OPTIONS} selected={outfit} onSelect={setOutfit} />
         <SelectionRow label="INVENTORY" options={ACCESSORY_OPTIONS} selected={accessory} onSelect={setAccessory} />
@@ -57,7 +57,7 @@ const CharacterCreator: React.FC<CharacterCreatorProps> = ({ onComplete }) => {
 
       <button
         onClick={handleSubmit}
-        className="w-full mt-8 bg-yellow-600 hover:bg-yellow-500 text-slate-900 font-pixel py-4 rounded shadow-lg transform transition active:scale-95"
+        className="w-full mt-4 sm:mt-6 bg-yellow-600 hover:bg-yellow-500 text-slate-900 font-pixel py-3 sm:py-4 rounded shadow-lg transform transition active:scale-95 text-sm sm:text-base"
       >
         START QUEST
       </button>
@@ -79,8 +79,8 @@ const SelectionRow = ({ label, options, selected, onSelect }: any) => (
               : 'border-slate-700 bg-slate-800 opacity-60 hover:opacity-100'
           }`}
         >
-          <span className="text-2xl mb-1">{opt.emoji}</span>
-          <span className="text-[0.6rem] font-mono text-center leading-tight">{opt.name}</span>
+          <span className="text-xl sm:text-2xl mb-1">{opt.emoji}</span>
+          <span className="text-[0.55rem] sm:text-[0.6rem] font-mono text-center leading-tight">{opt.name}</span>
         </button>
       ))}
     </div>
